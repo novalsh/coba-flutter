@@ -84,7 +84,106 @@ class ProfileView extends GetView<ProfileController> {
                       ))
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("My Folder",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      )),
+                  Container(
+                      width: 100,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(Icons.plus_one_rounded),
+                          Icon(Icons.settings),
+                          Icon(Icons.arrow_right_alt_sharp),
+                        ],
+                      ))
+                ],
+              ),
+            ),
+            Container(
+              height: 500,
+              child: GridView.count(
+                physics: ScrollPhysics(),
+                crossAxisCount: 2,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.amber,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Folder 1",
+                          style: TextStyle(fontSize: 25),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text("12 File", style: TextStyle(fontSize: 20)),
+                        Icon(Icons.folder, size: 50)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.red,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Folder 2",
+                          style: TextStyle(fontSize: 25),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text("12 File", style: TextStyle(fontSize: 20)),
+                        Icon(Icons.folder, size: 50)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Folder 3",
+                          style: TextStyle(fontSize: 25),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text("12 File", style: TextStyle(fontSize: 20)),
+                        Icon(Icons.folder, size: 50)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.blue,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Folder 4",
+                          style: TextStyle(fontSize: 25),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text("12 File", style: TextStyle(fontSize: 20)),
+                        Icon(Icons.folder, size: 50)
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ));
   }
