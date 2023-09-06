@@ -112,7 +112,7 @@ class ProfileView extends GetView<ProfileController> {
               ),
             ),
             Container(
-              height: 500,
+              height: 300,
               child: GridView.count(
                 physics: ScrollPhysics(),
                 crossAxisCount: 2,
@@ -180,6 +180,35 @@ class ProfileView extends GetView<ProfileController> {
                         Icon(Icons.folder, size: 50)
                       ],
                     ),
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Recent Files",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      )),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ListTile(
+                    leading: Container(
+                        width: 50,
+                        height: 50,
+                        child: Image.asset(
+                          "assets/image/a.png",
+                          fit: BoxFit.cover,
+                        )),
+                    title: Text("Word.pdf", style: TextStyle(fontSize: 13)),
+                    subtitle: Text("12.5 MB"),
+                    trailing: Icon(Icons.more_vert),
                   ),
                 ],
               ),
